@@ -42,8 +42,11 @@
 
 // with a reduce method
 const reverse = (str) => {
-  return str.split('').reduce((reversed, character) => character + reversed, '');
+  return str
+    .split('')
+    .reduce((reversed, character) => character + reversed, '');
 };
+
 
 // recursion
 // function reverse(str) {
@@ -62,7 +65,5 @@ const reverse = (str) => {
 // for each character in the provided String
 // take the character and add it to the start of 'reversed
 // return the variable reversed'
-
-
 
 module.exports = reverse;
