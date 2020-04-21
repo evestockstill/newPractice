@@ -33,8 +33,8 @@
 function maxChar(myStr) {
   let charObj = {};
   return [...myStr].reduce((_, char) => {
-    if (char in charObj) charObj[char]++;
-    else if (char !== ' ') charObj[char] = 1;
+    if(char in charObj) charObj[char]++;
+    else if(char !== ' ') charObj[char] = 1;
     return Object.keys(charObj).reduce((a, b) => {
       return charObj[a] > charObj[b] ? a : b;
     });

@@ -52,7 +52,7 @@
       "always"
     ],
     "keyword-spacing": [
-      "error",
+      "error", 
       {
         "before": true,
         "after": true,
