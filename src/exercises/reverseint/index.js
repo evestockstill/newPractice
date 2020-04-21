@@ -17,7 +17,7 @@
 //   return parseInt(reversed);
 // };
 
-// with the built in math property
+// with the built in math property(math.sign will keep the right positive or neg)
 const reverseInt = (num) => {
   const reversed = num.toString().split('').reverse().join('');
   return parseInt(reversed) * Math.sign(num);
