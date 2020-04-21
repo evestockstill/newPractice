@@ -8,9 +8,19 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-//
-const reverseInt = (n) => {
-  return n.toString().split('').reverse().join('');
+// this is a longer more indirect way with repeating with if
+// const reverseInt = (n) => {
+//   const reversed = n.toString().split('').reverse().join('');
+//   if(n < 0) {
+//     return parseInt(reversed) * -1;
+//   }
+//   return parseInt(reversed);
+// };
+
+// with the built in math property
+const reverseInt = (num) => {
+  const reversed = num.toString().split('').reverse().join('');
+  return parseInt(reversed) * Math.sign(num);
 };
 
 module.exports = reverseInt;
