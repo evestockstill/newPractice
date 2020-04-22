@@ -26,8 +26,6 @@
 // / add a pace to 'stair'
 // / console log 'stair'
 
-
-
 // const steps = (n) => {
 //   for(let row = 0; row < n; row++) {
 //     let stair = '';
@@ -42,10 +40,28 @@
 //   }
 // };
 
+// with recursion
 
+// DO NOT FORGET A BASE CASE!!!!!!
+// if(row === n) then we have hit the end of our problem
+// / if the 'star string has a length === n then we are at the end of a row
+// / if the length of the stair string is less than or equal to the row number we're working on we add a '# otherwise add a space
 
-
-// with recursion 
+const steps = (n, row = 0, stair = '') => {
+  if(n === row) {
+    return;
+  }
+  if(n === stair.length) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+  if(stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+  steps(n, row, stair);
+};
 
 //  MINE DID NOT WORK
 // const steps = (n) => {
