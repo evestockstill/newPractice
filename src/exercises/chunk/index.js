@@ -36,13 +36,24 @@
 // / add size to index
 
 // solution with slice
+// const chunk = (array, size) => {
+//   let chunked = [];
+//   let index = 0;
+//   while(index < array.length) {
+//     chunked.push(array.slice(index, index + size));
+//     index += size;
+//   }
+//   return chunked;
+// };
+
+// solution with a forEach and ternary
 const chunk = (array, size) => {
   let chunked = [];
-  let index = 0;
-  while(index < array.length) {
-    chunked.push(array.slice(index, index + size));
-    index += size;
-  }
+  array.forEach((item, index) => {
+    index % size === 0
+      ? chunked.push([item])
+      : chunked[chunked.length - 1].push(item);
+  });
   return chunked;
 };
 
