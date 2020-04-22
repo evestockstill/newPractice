@@ -16,21 +16,15 @@
 // / join 'words' into a string and return it
 
 // with forEach
-// const capitalize = (str) => {
-//   let wordsArray = str.toLowerCase().split(' ');
-//   let capsArray = [];
-//   wordsArray.forEach((word) => {
-//     capsArray.push(word[0].toUpperCase() + word.slice(1));
-//   });
-//   return capsArray.join(' ');
-// };
-
-
-// 3 solution from video 
-
 const capitalize = (str) => {
-    
-}
+  let wordsArray = str.toLowerCase().split(' ');
+  let capsArray = [];
+  wordsArray.forEach((word) => {
+    capsArray.push(word[0].toUpperCase() + word.slice(1));
+  });
+  return capsArray.join(' ');
+};
+
 
 
 
