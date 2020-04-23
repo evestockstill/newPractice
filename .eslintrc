@@ -44,41 +44,44 @@
     ],
     "comma-spacing": "error",
     "space-before-function-paren": [
-      0
+      "error",
+      "never"
     ],
     "eol-last": [
       "error",
       "always"
     ],
     "keyword-spacing": [
-      "error", 
+      "error",
       {
         "before": true,
         "after": true,
-        "overrides": {
-          "do": {
-            "after": false
-          },
-          "for": {
-            "after": false
-          },
-          "if": {
-            "after": false
-          },
-          "switch": {
-            "after": false
-          },
-          "while": {
-            "after": false
-          },
-          "catch": {
-            "after": false
-          }
-        }
+        // "overrides": {
+        //   "do": {
+        //     "after": false
+        //   },
+        //   "for": {
+        //     "after": false
+        //   },
+        //   "if": {
+        //     "after": false
+        //   },
+        //   "switch": {
+        //     "after": false
+        //   },
+        //   "while": {
+        //     "after": false
+        //   },
+        //   "catch": {
+        //     "after": false
+        //   }
+        // }
       }
     ],
     "array-bracket-spacing": "error",
     "babel/no-invalid-this": 1,
     "babel/semi": 0
   }
+  
+  
 }
