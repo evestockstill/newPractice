@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // --- Directions
 // 1) Complete the task in weave/queue.js
 // 2) Implement the 'weave' function.  Weave
@@ -24,6 +25,17 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+const weave = (sourceOne, sourceTwo) => {
+  const que = new Queue();
+  while (sourceOne.peek() || sourceTwo.peek()) {
+    if (sourceOne.peek()) {
+      que.add(sourceOne.remove);
+    }
+    if (sourceTwo.peek()) {
+      que.add(sourceTwo.remove);
+    }
+    return que;
+  }
+};
 
 module.exports = weave;
