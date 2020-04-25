@@ -8,10 +8,10 @@
 //   palindrome("abcdefg") === false
 
 // most direct solution
-// const palindrome = (str) => {
-//   const reversed = str.split('').reverse().join('');
-//   return str === reversed;
-// };
+const palindrome = (str) => {
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+};
 
 // another array helper   .every()  this does twice as much work, but it is worth to do, to be able to explain. Must always return
 const palindrome = (str) => {
@@ -20,13 +20,13 @@ const palindrome = (str) => {
   });
 };
 
-// const palindrome = (str) => {
-//   str.split('').reduce((order, character) => character + order, '');
-//   if () {
-//     return true;
-//   } else {
-//     false;
-//   }
-// };
+const palindrome = (str) => {
+  str.split('').reduce((order, character) => character + order, '');
+  if () {
+    return true;
+  } else {
+    false;
+  }
+};
 
 module.exports = palindrome;

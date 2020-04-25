@@ -10,15 +10,15 @@ test('Node is a class', () => {
   expect(typeof Node.prototype.constructor).toEqual('function');
 });
 
-describe.skip('A Node', () => {
-  test('has properties "data" and "next"', () => {
+describe('A Node', () => {
+  test('has properties "val" and "next"', () => {
     const node = new Node('a', 'b');
     expect(node.data).toEqual('a');
     expect(node.next).toEqual('b');
   });
 });
 
-describe.skip('Insert First', () => {
+describe('Insert First', () => {
   test('appends a node to the start of the list', () => {
     const l = new List();
     l.insertFirst(1);
@@ -301,7 +301,7 @@ describe.skip('for...of loops', () => {
     l.insertLast(3);
     l.insertLast(4);
 
-    for (let node of l) {
+    for(let node of l) {
       node.data += 10;
     }
 
@@ -314,7 +314,7 @@ describe.skip('for...of loops', () => {
   test('for...of works on an empty list', () => {
     const l = new List();
     expect(() => {
-      for (let node of l) {
+      for(let node of l) {
       }
     }).not.toThrow();
   });
