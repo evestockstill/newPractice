@@ -82,15 +82,27 @@ class SinglyLinkedList {
   }
   insert(index, val) {
     if(index < 0 || index >= this.length) return false;
-    if(index === this.length) return this.push(val);
-    if(index === 0) return this.unShift(val);
+    if(index === this.length) return !!this.push(val);
+    if(index === 0) return !!this.unShift(val);
     let newNode = new Node(index);
     const prev = this.get(index - 1);
     const temp = prev.next;
     prev.next = newNode;
     newNode.next = temp;
     this.length++;
-    return this;
+    return true;
+  }
+  remove(index) {
+    if(index < 0 || index >= this.length) return undefined;
+    if(index === 0) return this.shift();
+    if(index === this.length - 1) return this.pop();
+    // let newNode = new Node(val);
+    const prevNode = this.get(index - 1);
+    const tempRemove = prevNode.next;
+    prevNode.next = tempRemove;
+    newNode.next = tempRemove;
+    this.length--;
+    return this.newNode(val);
   }
 }
 
