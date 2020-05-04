@@ -1,3 +1,11 @@
+// Big O of Singly Linked ListeningStateChangedEvent
+// Insertion - O(1)
+// Removal - it depends.... O(1)
+//  or O(N)
+//  searching O(N)
+//  access - O(N)
+
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -96,13 +104,27 @@ class SinglyLinkedList {
     if(index < 0 || index >= this.length) return undefined;
     if(index === 0) return this.shift();
     if(index === this.length - 1) return this.pop();
-    // let newNode = new Node(val);
     const prevNode = this.get(index - 1);
-    const tempRemove = prevNode.next;
-    prevNode.next = tempRemove;
-    newNode.next = tempRemove;
+    const removed = prevNode.next;
+    prevNode.next = removed.next;
     this.length--;
-    return this.newNode(val);
+    return this.removed;
+  }
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let prev = null;
+    let next;
+    for(let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+
+   
   }
 }
 
